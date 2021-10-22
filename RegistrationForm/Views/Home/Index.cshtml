@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+   
+
+
+
+    <div id='mydiv1' style='border:1px solid gray;'></div>
+    <script>
+        $(document).ready(function () {
+            $.get("/Home/Main", function (data) {
+                $("#mydiv1").html(data);
+            }).fail(function (data) // обработка ошибки
+            {
+                alert('not loaded');
+            });;
+        });
+    </script>
+</body>
+
+</html>
+
+
+
